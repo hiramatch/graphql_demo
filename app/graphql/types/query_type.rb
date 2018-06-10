@@ -11,6 +11,7 @@ Types::QueryType = GraphQL::ObjectType.define do
     }
   end
   field :user, !Types::UserType do
+    description 'You can access current_user'  # description を追加
     resolve ->(_obj, _args, ctx) {
       # データを取得するロジックをじっそうする
       # objはオブジェクト自身, ctxは重要情報

@@ -14,6 +14,8 @@ gem 'ridgepole'
 gem 'ridgepole-rails'
 gem 'sass-rails'
 gem 'uglifier'
+gem 'graphql', '1.7.7'
+gem 'graphiql-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

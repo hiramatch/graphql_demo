@@ -11,16 +11,28 @@ users = User.seed(
   {
     name: '花子',
     email: 'hanaco@mail.com',
-  },
+  }
 )
 user1 = users.first
 user2 = users.second
 user3 = users.third
 
 Address.seed(
-  user_id: user1.id,
-  postal_code: 1_000_014,
-  address: '東京都千代田区永田町１丁目７−１',
+  {
+    user_id: user1.id,
+    postal_code: 1_000_014,
+    address: '東京都千代田区永田町１丁目７−１',
+  },
+  {
+    user_id: user2.id,
+    postal_code: 1_000_015,
+    address: '東京都千代田区永田町１丁目７−２',
+  },
+  {
+    user_id: user3.id,
+    postal_code: 1_000_016,
+    address: '東京都千代田区永田町１丁目７−３',
+  }
 )
 
 posts = Post.seed(
